@@ -1,0 +1,35 @@
+/* 64rem is also 1028px when basefont is 16px */
+@media only screen and (min-width: 64rem) {
+    nav {
+      background-color: var(--primary-color);
+      /* margin-bottom: 20px;*/
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    nav button {
+      display: none;
+    }
+    nav ul#primaryNav {
+      display: flex;
+      justify-items: center;
+    }
+  
+    nav ul li a {
+      border: none;
+      color: var(--accent1-color);
+    }
+  
+    nav ul li a:hover {
+      background-color: var(--secondary-color);
+    }
+  
+    nav ul li.active a {
+      background-color: var(--secondary-color);
+    }
+    header {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 3fr 1fr;
+        grid-template-rows: 1fr 0.15fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+      }

@@ -1,0 +1,112 @@
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #FDFFFC;
+  --secondary-color: #011627;
+  --accent1-color: #2EC4B6;
+  --accent2-color: #244F26;
+}
+
+.primary {
+  background-color: var(--primary-color);
+  color: var(--accent1-color);
+  justify-content: center;
+}
+.secondary {
+  background-color: var(--secondary-color);
+}
+.accent1 {
+  background-color: var(--accent1-color);
+}
+.accent2 {
+  background-color: var(--accent2-color);
+}
+
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1,
+p {
+  margin: 0 2vw;
+}
+
+h2 {
+  margin: 0.25rem;
+}
+nav {
+  background-color: #2EC4B6;
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: #555;
+  width: 350px;
+}
+
+nav button {
+  margin: 0.2rem 2vw;
+  background-color: transparent;
+  border: none;
+}
+
+nav ul li a {
+  font-weight: 100;
+  display: block;
+  padding: 0.8rem 2vw;
+  text-decoration: none;
+  color: #333;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+}
+
+nav ul li.active a {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #2EC4B6;
+}
+
+nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+  display: none;
+}
+nav ul.open {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  background-color: #2EC4B6;
+  left: 0;
+}
+#hamburgerBtn span:nth-child(1) {
+  display: block;
+  font-size: 28px;
+}
+#hamburgerBtn span:nth-child(2) {
+  display: none;
+}
+
+#hamburgerBtn.open span:nth-child(1) {
+  display: none;
+}
+#hamburgerBtn.open span:nth-child(2) {
+  display: block;
+  font-size: 28px;
+}
+
+.footerText p {
+  font-size: 1rem;
+  color: var(--accent1-color);
+  text-align: center;
