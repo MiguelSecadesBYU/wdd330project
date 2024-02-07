@@ -47,16 +47,17 @@ function addMatchTile(data){
     awayTileLogo.src = data['teams']['away']['logo'];
     awayTileName.innerHTML = data['teams']['away']['name'];
 
-    homeTeam.appendChild(homeTeamLogo);
-    homeTeam.appendChild(homeTeamName);
-    awayTeam.appendChild(awayTeamLogo);
-    awayTeam.appendChild(awayTeamName);
+    homeTeam.appendChild(homeTileLogo);
+    homeTeam.appendChild(homeTileName);
+    awayTeam.appendChild(awayTileLogo);
+    awayTeam.appendChild(awayTileName);
 
     var score = document.createElement('p');
-    score.innerHTML = data['goals'] + " : "+ data['goals']['away'];
+    score.innerHTML = data['goals']['home'] + " : "+ data['goals']['away'];
     matchTile.appendChild(homeTeam);
     matchTile.appendChild(score);
     matchTile.appendChild(awayTeam);
+    matchTable.appendChild(matchTile);
 }
 
 

@@ -133,12 +133,15 @@ main{
   background-color: var(--primary-color);
 }
 .results_content{
+  position:relative;
   padding: 16px;
   margin-left: 25%;
   background-color: var(--accent2-color);
   width: 50%;
+  height: 800px;
   border-radius: 8px;
   text-transform: uppercase;
+  overflow: scroll;
 }
 .title-box{
   margin: 25px 0;
@@ -166,6 +169,9 @@ main{
 
 .matches-table{
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  
 }
 
 .match-tile{
