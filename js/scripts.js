@@ -81,7 +81,7 @@ function getData(){
         elapsedTime.innerHTML = fixture['status']['elapsed'] + "'";
         homeTeamLogo.src = teams['home']['logo'];
         homeTeamName.innerHTML = teams['home']['name'];
-        homeTeamLogo.src = teams['away']['logo'];
+        awayTeamLogo.src = teams['away']['logo'];
         awayTeamName.innerHTML = teams['away']['name'];
         lastMatchGoals.innerHTML = goals['home'] + " : " + goals['away'];
 
