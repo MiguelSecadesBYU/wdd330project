@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
 :root {
   /* change the values below to your colors from your palette */
   --primary-color: #FDFFFC;
@@ -32,6 +34,7 @@ html {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1,
@@ -123,4 +126,72 @@ nav ul.open {
 #home_content{
   color: var(--primary-color);
   background-color: var(--secondary-color);
+}
+
+main{
+  text-align: center;
+  background-color: var(--primary-color);
+}
+.results_content{
+  padding: 16px;
+  margin-left: 25%;
+  background-color: var(--accent2-color);
+  width: 50%;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+.title-box{
+  margin: 25px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.title-box #goals{
+  font-size: 2.5rem;
+}
+
+.team{
+  width: 200px;
+}
+
+.team img {
+  height: 54px;
+  width: 54px;
+}
+
+.matches-table{
+  margin-top: 50px;
+}
+
+.match-tile{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 10px 0;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.match-tile img{
+  width:52px;
+  height: 52px;
+}
+
+.match-tile p{
+  font-size: 1.2rem;
+}
+
+.match-tile #goals{
+  font-size: 1.1rem;
+}
+
+.match-tile .team{
+  width: 100px;
 }
