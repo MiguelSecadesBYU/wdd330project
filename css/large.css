@@ -1,16 +1,20 @@
 /* 64rem is also 1028px when basefont is 16px */
 @media only screen and (min-width: 64rem) {
     nav {
-      background-color: var(--primary-color);
-      /* margin-bottom: 20px;*/
-      grid-area: 1 / 2 / 2 / 3;
+      grid-area: 1 / 3 / 2 / 6;
+      background-color:  var(--secondary-color);
     }
     nav button {
       display: none;
     }
-    nav ul#primaryNav {
+    nav ul{
+      background-color:  var(--secondary-color);
       display: flex;
       justify-items: center;
+    }
+
+    nav ul li{
+      background-color: var(--secondary-color);
     }
   
     nav ul li a {
@@ -19,7 +23,8 @@
     }
   
     nav ul li a:hover {
-      background-color: var(--secondary-color);
+       color: var(--primary-color);
+     
     }
   
     nav ul li.active a {
@@ -28,8 +33,12 @@
     header {
         max-width: 100%;
         display: grid;
-        grid-template-columns: 2fr 3fr 1fr;
-        grid-template-rows: 1fr 0.15fr;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
       }
+
+      #logo { grid-area: 1 / 1 / 2 / 3; }
+ 
+      

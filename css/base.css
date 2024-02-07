@@ -43,21 +43,23 @@ h2 {
   margin: 0.25rem;
 }
 nav {
-  background-color: #2EC4B6;
-  margin-right: 20px;
+  background-color: var(--secondary-color);
+ /* margin-right: 20px;*/
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  color: #555;
+  
+  background-color: var(--secondary-color);
   width: 350px;
 }
 
 nav button {
   margin: 0.2rem 2vw;
   background-color: transparent;
+  color: var(--accent1-color);
   border: none;
 }
 
@@ -66,18 +68,23 @@ nav ul li a {
   display: block;
   padding: 0.8rem 2vw;
   text-decoration: none;
-  color: #333;
+  color: var(--secondary-color);
   border-top: 1px solid rgba(0, 0, 0, 0.5);
   font-size: 1.5rem;
 }
 
+nav ul li{
+  background-color: var(--accent1-color);
+}
+
 nav ul li.active a {
-  background-color: rgba(0, 0, 0, 0.2);
-  color: #2EC4B6;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 nav ul li a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 nav ul {
@@ -87,7 +94,7 @@ nav ul.open {
   display: block;
   position: absolute;
   z-index: 1;
-  background-color: #2EC4B6;
+  background-color: var(--accent1-color);
   left: 0;
 }
 #hamburgerBtn span:nth-child(1) {
@@ -108,5 +115,12 @@ nav ul.open {
 
 .footerText p {
   font-size: 1rem;
-  color: var(--accent1-color);
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
   text-align: center;
+}
+
+#home_content{
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
