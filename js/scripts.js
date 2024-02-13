@@ -1,7 +1,7 @@
-const year = document.querySelector('#year');
-year.innerHTML = new Date().getFullYear();
+const current_year = document.querySelector('#current_year');
+current_year.innerHTML = new Date().getFullYear();
 
-document.getElementById("modify").innerHTML = document.lastModified
+document.getElementById("last_modified").innerHTML = document.lastModified
 
 function toggleMenu(){
     document.getElementById("primaryNav").classList.toggle("open");
@@ -71,9 +71,7 @@ function getData(){
         }
     })
     .then(response => response.json().then(data =>{
-        console.log(response);
         var matchesList = data['response'];
-
         var fixture = matchesList[0]['fixture'];
         var goals = matchesList[0]['goals'];
         var teams = matchesList[0]['teams'];
@@ -86,7 +84,7 @@ function getData(){
         awayTeamName.innerHTML = teams['away']['name'];
         lastMatchGoals.innerHTML = goals['home'] + " : " + goals['away'];
 
-        for(var i=1;i<matchesList.length;i++){
+        for(var i=1;i<5;i++){
             addMatchTile(matchesList[i]);
         }
     }))
@@ -95,6 +93,6 @@ function getData(){
         
     })
 
-}//27:43
+}
 
 getData();

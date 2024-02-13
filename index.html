@@ -8,8 +8,7 @@
     in WDD 330: Web Frontend Development II at Brigham Young University - Idaho">
     <title>Soccer Stats - Home</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/base.css">
-  
+    <link rel="stylesheet" href="css/base.css">  
     <link rel="stylesheet" href="css/large.css">
 
 </head>
@@ -32,12 +31,10 @@
  
                 </ul>
             </nav>
-
-            <span id="currentDate"></span>
         </header>
         
         <main>
-            <div class="results_content">
+            <div class="results">
                 <h1>ScoreBoard</h1>
 
                 <div class="title-box">
@@ -67,21 +64,21 @@
         </main>
 
         <footer>
-            <div class="footerLogo">
-                <section class="footerText">
-                    <div class="footer1stPart">
-                        <h1>Soccer Stats</h1>
-                    </div>
-                    <div class="footer2ndPart">
-                        <p>&copy; <span id="year">year</span> Soccer Stats</p>
-                        <h1>Miguel Secades García</h1>
-                        <p>WDD330 Proyect</p>
-                        <p>Last Updated: <span id="modify"> .</span></p>
-                    </div>
+        <div class="footerLogo">
+            <section class="footerText">
+                <div class="footer1stPart">
+                    <h1>Soccer Stats</h1>
+                </div>
+                <div class="footer2ndPart">
+                    <p>© <span id="current_year">year</span> Soccer Stats</p>
+                    <h1>Miguel Secades García</h1>
+                    <p>WDD330 Proyect</p>
+                    <p>Last Updated: <span id="last_modified"> .</span></p>
+                </div>
 
-                </section>
-            </div>
-        </footer>
+            </section>
+        </div>
+    </footer>
     </div>
     <script src="js/scripts.js"></script>
 

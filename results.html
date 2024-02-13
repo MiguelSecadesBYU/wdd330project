@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Final project by Miguel Secades 
+    in WDD 330: Web Frontend Development II at Brigham Young University - Idaho">
+    <title>Soccer Stats - Results</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/large.css">
+</head>
+<body>
+    <div id="results_content">
+        <header>
+            <div class="logo">
+                <section class="headings">
+                    <h1>Soccer Stats</h1>
+                </section>
+            </div>
+
+            <nav>
+                <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
+                <ul id="primaryNav">
+                    <li><a href="index.html">Home</a></li>
+                    <li class ="active"><a href="#">Results</a></li>
+                    <li><a href="live.html">Live</a></li>
+                    <li><a href="stats.html">Stats</a></li>  
+ 
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <div class="results">
+                <h1>Results</h1>
+
+                <form id="leagueForm">
+                    <label for="leagueSelect">Select a league:</label>
+                    <select id="leagueSelect">
+                        <option value="140">Hypermotion League</option>
+                        <option value="39">Premier League</option>
+                        <option value="78">Bundesliga</option>
+                        <option value="61">Ligue 1</option>
+                        <option value="135">Calcio</option>
+                        <option value="88">Eredivisie</option>
+                        <option value="253">MLS</option>
+                    </select>
+                </form>
+
+                <div id="resultsTable" class="results-table">
+
+                </div>
+            </div>
+
+        </main>
+
+        <footer>
+            <div class="footerLogo">
+                <section class="footerText">
+                    <div class="footer1stPart">
+                        <h1>Soccer Stats</h1>
+                    </div>
+                    <div class="footer2ndPart">
+                        <p>© <span id="current_year">year</span> Soccer Stats</p>
+                        <h1>Miguel Secades García</h1>
+                        <p>WDD330 Proyect</p>
+                        <p>Last Updated: <span id="last_modified"> .</span></p>
+                    </div>
+
+                </section>
+            </div>
+        </footer>
+    </div>
+    <script src="js/scripts.js"></script>
+    <script src="js/results.js"></script>
+ 
+</body>
+</html>

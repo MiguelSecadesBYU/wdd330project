@@ -116,14 +116,13 @@ nav ul.open {
   font-size: 28px;
 }
 
-.footerText p {
-  font-size: 1rem;
+.footerText p, h1 {
   color: var(--primary-color);
   background-color: var(--secondary-color);
   text-align: center;
 }
 
-#home_content{
+#home_content, #results_content{
   color: var(--primary-color);
   background-color: var(--secondary-color);
 }
@@ -132,7 +131,7 @@ main{
   text-align: center;
   background-color: var(--primary-color);
 }
-.results_content{
+.results{
   position:relative;
   padding: 16px;
   margin-left: 25%;
