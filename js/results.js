@@ -41,6 +41,16 @@ function addResultsRow(data){
     resultsTable.appendChild(resultsRow);
 }
 
+var matchesPerRound = {
+    "140": 10, //Hypermotion League
+    "39": 9, //Premier League
+    "78": 9, //Bundesliga
+    "61": 10, //Ligue 1
+    "135": 10, //Calcio
+    "88": 9, //Eredivisie
+    "253": 13 //MLS
+};
+
 //Function to get the results data from the API
 function getResults(){
     //Clear the previous results
@@ -49,8 +59,11 @@ function getResults(){
     //Get the selected league id
     var leagueId = leagueSelect.value;
 
+    //Get the number of matches per round for the selected league
+    var last = matchesPerRound[leagueId];
+
     //Fetch the data from the API
-    fetch("https://api-football-v1.p.rapidapi.com/v3/fixtures?league="+leagueId+"&last=1&timezone=Europe/Madrid", {
+    fetch("https://api-football-v1.p.rapidapi.com/v3/fixtures?league="+leagueId+"&last="+last+"&timezone=Europe/Madrid", {
         "method" : "GET",
         "headers" : {
         "x-rapidapi-host": "api-football-v1.p.rapidapi.com",  
