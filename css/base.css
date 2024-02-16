@@ -37,6 +37,11 @@ html {
   font-family: 'Roboto', sans-serif;
 }
 
+header, footer {
+  width: 100%;
+  background-color: var(--secondary-color);
+}
+
 h1,
 p {
   margin: 0 2vw;
@@ -127,21 +132,73 @@ nav ul.open {
   background-color: var(--secondary-color);
 }
 
-main{
-  text-align: center;
-  background-color: var(--primary-color);
+main {
+  background-color: var(--accent2-color);
+  padding: 20px;
 }
+
+label {
+  margin-right: 10px;
+}
+
 .results, .live{
   position:relative;
   padding: 16px;
   margin-left: 25%;
-  background-color: var(--accent2-color);
+  background-color: var(--primary-color);
   width: 50%;
   height: 800px;
   border-radius: 8px;
   text-transform: uppercase;
   overflow: scroll;
 }
+
+.results-row, .live-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.results-row:hover {
+  transform: scale(1.05);
+  border-width: 4px;
+}
+
+.live-row:hover {
+  transform: scale(1.05);
+  border-width: 4px;
+}
+.results-row p, live-row p {
+  color: var(--secondary-color);
+}
+
+.team {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.team img {
+  margin-right: 10px;
+}
+
+#leagueForm {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  border: 2px solid var(--accent1-color);
+  border-radius: 8px;
+  padding: 5px;
+}
+
+#leagueSelect {
+  width: 250px;
+}
+
+
 .title-box{
   margin: 25px 0;
   display: flex;
