@@ -41,17 +41,18 @@
 
       #logo { grid-area: 1 / 1 / 2 / 3; }
       .results {
-        width: 80%;
         margin-left: 10%;
         margin-right: 10%;
         border-radius: 16px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
       
-      .results, .live {
+      .results, .live, .stats {
         width: 50%;
         margin-left: 20%;
         margin-right: 0;
+        border-radius: 16px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
       
  

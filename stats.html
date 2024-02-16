@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Final project by Miguel Secades 
+    in WDD 330: Web Frontend Development II at Brigham Young University - Idaho">
+    <title>Soccer Stats - Stats</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base.css">  
+    <link rel="stylesheet" href="css/large.css">
+
+</head>
+<body>
+    <div id="stats_content">
+        <header>
+            <div class="logo">
+                <section class="headings">
+                    <h1>Soccer Stats</h1>
+                </section>
+            </div>
+
+            <nav>
+                <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
+                <ul id="primaryNav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="results.html">Results</a></li>
+                    <li><a href="live.html">Live</a></li>
+                    <li class = "active"><a href="#">Stats</a></li>  
+ 
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <div class="stats">
+                <h1>Stats</h1>
+
+                <div class="league-stats">
+                    <h2>League Stats</h2>
+                    <form id="leagueForm1">
+                        <label for="leagueSelect1">Select a league:</label>
+                        <select id="leagueSelect1">
+                            <option value="140">Hypermotion League</option>
+                            <option value="39">Premier League</option>
+                            <option value="78">Bundesliga</option>
+                            <option value="61">Ligue 1</option>
+                            <option value="135">Calcio</option>
+                            <option value="88">Eredivisie</option>
+                            <option value="253">MLS</option>
+                        </select>
+                    </form>
+
+                    <div id="leagueStatsTable" class="stats-table">
+
+                    </div>
+                </div>
+
+                <div class="team-stats">
+                    <h2>Team Stats</h2>
+                    <form id="leagueForm2">
+                        <label for="leagueSelect2">Select a league:</label>
+                        <select id="leagueSelect2">
+                            <option value="140">Hypermotion League</option>
+                            <option value="39">Premier League</option>
+                            <option value="78">Bundesliga</option>
+                            <option value="61">Ligue 1</option>
+                            <option value="135">Calcio</option>
+                            <option value="88">Eredivisie</option>
+                            <option value="253">MLS</option>
+                        </select>
+                    </form>
+
+                    <form id="teamForm">
+                        <label for="teamSelect">Select a team:</label>
+                        <select id="teamSelect">
+                            <!-- The options will be dynamically generated -->
+                        </select>
+                    </form>
+
+                    <div id="teamStatsTable" class="stats-table">
+
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer>
+        <div class="footerLogo">
+            <section class="footerText">
+                <div class="footer1stPart">
+                    <h1>Soccer Stats</h1>
+                </div>
+                <div class="footer2ndPart">
+                    <p>© <span id="current_year">year</span> Soccer Stats</p>
+                    <h1>Miguel Secades García</h1>
+                    <p>WDD330 Proyect</p>
+                    <p>Last Updated: <span id="last_modified"> .</span></p>
+                </div>
+
+            </section>
+        </div>
+    </footer>
+    </div>
+    <script src="js/scripts.js"></script>
+    <script src="js/stats.js"></scr
+</body>
+</html>

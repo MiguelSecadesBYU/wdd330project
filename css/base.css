@@ -127,7 +127,7 @@ nav ul.open {
   text-align: center;
 }
 
-#home_content, #results_content, #live:_content{
+#home_content, #results_content, #live_content, #stats_content{
   color: var(--primary-color);
   background-color: var(--secondary-color);
 }
@@ -141,7 +141,7 @@ label {
   margin-right: 10px;
 }
 
-.results, .live{
+.results, .live, .stats{
   position:relative;
   padding: 16px;
   margin-left: 25%;
@@ -153,7 +153,7 @@ label {
   overflow: scroll;
 }
 
-.results-row, .live-row {
+.results-row, .live-row, .stats-row {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -161,16 +161,12 @@ label {
   margin: 10px 0;
 }
 
-.results-row:hover {
+.results-row:hover, .live-row:hover, .stats-row:hover {
   transform: scale(1.05);
   border-width: 4px;
 }
 
-.live-row:hover {
-  transform: scale(1.05);
-  border-width: 4px;
-}
-.results-row p, live-row p {
+.results-row p, live-row p, stats-row p {
   color: var(--secondary-color);
 }
 
