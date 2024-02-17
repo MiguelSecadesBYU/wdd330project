@@ -41,7 +41,16 @@ function addLiveRow(data){
     liveTable.appendChild(liveRow);
 }
 
-//Function to get the live data from the API
+var matchesPerRound = {
+    "140": 10, //Hypermotion League
+    "39": 9, //Premier League
+    "78": 9, //Bundesliga
+    "61": 10, //Ligue 1
+    "135": 10, //Calcio
+    "88": 9, //Eredivisie
+    "253": 13 //MLS
+};
+
 function getLive(){
     //Clear the previous live
     liveTable.innerHTML = "";
@@ -55,23 +64,31 @@ function getLive(){
         "headers" : {
         "x-rapidapi-host": "api-football-v1.p.rapidapi.com",  
         "x-rapidapi-key": "065a61a84cmsh3c1f8ad78d59d8fp19b1aajsn7f4f7d3832f5"
-    }
-})
-.then(response => response.json().then(data =>{
-    console.log(response);
-    var liveList = data['response'];
+        }
+    })
 
-    //Loop through the live matches and add them to the table
-    for(var i=0;i<liveList.length;i++){
-        addLiveRow(liveList[i]);
-    }
-}))
-.catch(err =>{
-   // console.log(err);
+    .then(response => response.json().then(data =>{
+        console.log(response);
+        var liveList = data['response'];
+
+        //Check if liveList is empty
+        if(liveList.length == 0){
+            //Show a message that there are no live matches
+            liveTable.innerHTML = "<p class='NoMatches'>There is no game in play.</p>";
+        } else {
+            //Loop through the live matches and add them to the table
+            for(var i=0;i<liveList.length;i++){
+                addLiveRow(liveList[i]);
+            }
+        }
+    }))
+    .catch(err =>{
+    // console.log(err);
     
-})
+    })
 
 }
+
 
 //Function to handle the change event of the league select
 function handleChange(){

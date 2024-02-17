@@ -128,8 +128,9 @@ nav ul.open {
 }
 
 #home_content, #results_content, #live_content, #stats_content{
-  color: var(--primary-color);
-  background-color: var(--secondary-color);
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  text-align: center;
 }
 
 main {
@@ -194,6 +195,10 @@ label {
   width: 250px;
 }
 
+.NoMatches{
+  color: var(--secondary-color);
+  justify-self: center;
+}
 
 .title-box{
   margin: 25px 0;
