@@ -148,7 +148,7 @@ label {
   margin-left: 25%;
   background-color: var(--primary-color);
   width: 50%;
-  height: 800px;
+  height:fit-content;
   border-radius: 8px;
   text-transform: uppercase;
   overflow: scroll;
