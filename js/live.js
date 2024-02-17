@@ -11,35 +11,81 @@ function addLiveRow(data){
     //home team cell
     var homeTeamCell = document.createElement('td');
     homeTeamCell.classList.add("live-cell");
-    homeTeamCell.innerHTML = data['teams']['home']['name'];
+
+    //home team logo
+    var homeLogo = document.createElement('img');
+    homeLogo.src = data['teams']['home']['logo'];
+    homeLogo.classList.add("team-logo");
+
+    //home team name
+    var homeName = document.createElement('span');
+    homeName.innerHTML = data['teams']['home']['name'];
+
+    homeTeamCell.appendChild(homeLogo);
+    homeTeamCell.appendChild(homeName);
 
     //away team cell
     var awayTeamCell = document.createElement('td');
     awayTeamCell.classList.add("live-cell");
-    awayTeamCell.innerHTML = data['teams']['away']['name'];
+
+    //away team logo
+    var awayLogo = document.createElement('img');
+    awayLogo.src = data['teams']['away']['logo'];
+    awayLogo.classList.add("team-logo");
+
+    //away team name
+    var awayName = document.createElement('span');
+    awayName.innerHTML = data['teams']['away']['name'];
+
+    awayTeamCell.appendChild(awayLogo);
+    awayTeamCell.appendChild(awayName);
 
     //score cell
     var scoreCell = document.createElement('td');
     scoreCell.classList.add("live-cell");
-    scoreCell.innerHTML = data['goals']['home'] + " : "+ data['goals']['away'];
+
+    //score box
+    var scoreBox = document.createElement('div');
+    scoreBox.classList.add("score-box");
+
+    //status box
+    var statusBox = document.createElement('p');
+    statusBox.classList.add("status-box");
+    statusBox.innerHTML = data['fixture']['status']['long'];
+
+        //time cell
+    var timeCell = document.createElement('p');
+    timeCell.classList.add("live-cell");
+    timeCell.innerHTML = data['fixture']['status']['elapsed'] + "'";
+
+    //score
+    var score = document.createElement('p');
+    score.innerHTML = data['goals']['home'] + " : "+ data['goals']['away'];
+
+    scoreBox.appendChild(statusBox);
+    scoreBox.appendChild(timeCell);
+    scoreBox.appendChild(score);
+    scoreCell.appendChild(scoreBox);
 
     //status cell
     var statusCell = document.createElement('td');
     statusCell.classList.add("live-cell");
-    statusCell.innerHTML = data['fixture']['status']['long'];
+    //status cell is empty
 
     //time cell
-    var timeCell = document.createElement('td');
-    timeCell.classList.add("live-cell");
-    timeCell.innerHTML = data['fixture']['status']['elapsed'] + "'";
+   // var timeCell = document.createElement('td');
+   // timeCell.classList.add("live-cell");
+   // timeCell.innerHTML = data['fixture']['status']['elapsed'] + "'";
 
     liveRow.appendChild(homeTeamCell);
-    liveRow.appendChild(awayTeamCell);
     liveRow.appendChild(scoreCell);
     liveRow.appendChild(statusCell);
-    liveRow.appendChild(timeCell);
+   // liveRow.appendChild(timeCell);
+    liveRow.appendChild(awayTeamCell);
     liveTable.appendChild(liveRow);
 }
+
+
 
 var matchesPerRound = {
     "140": 10, //Hypermotion League
@@ -63,7 +109,7 @@ function getLive(){
         "method" : "GET",
         "headers" : {
         "x-rapidapi-host": "api-football-v1.p.rapidapi.com",  
-        "x-rapidapi-key": ""
+        "x-rapidapi-key": "065a61a84cmsh3c1f8ad78d59d8fp19b1aajsn7f4f7d3832f5"
         }
     })
 

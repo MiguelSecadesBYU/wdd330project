@@ -1,6 +1,4 @@
 // Constants and global variables
-const API_KEY = "065a61a84cmsh3c1f8ad78d59d8fp19b1aajsn7f4f7d3832f5";
-const API_URL = "https://v3.football.api-sports.io";
 let LEAGUE_ID = "140"; // The ID of the league you want to show, for example, La Liga
 const SEASON = "2023"; // The season you want to show, for example, 2023
 const STAGE = "Regular Season"; // The stage you want to show, for example, Regular Season
@@ -26,16 +24,17 @@ const topKeeperPlayerGoals = document.getElementById("top-keeper-player-goals");
 function fetchAPI(endpoint, params) {
   // Build the URL with the parameters
   let url = new URL(API_URL + endpoint);
-  url.search = new URLSearchParams(params).toString();
+  url.search = new URLSearchParams({ ...params, timezone: "Europe/Madrid" }).toString();
 
-  // Create the options of the request
-  let options = {
+// Create the options of the request
+let options = {
     method: "GET",
     headers: {
-      "x-rapidapi-key": "065a61a84cmsh3c1f8ad78d59d8fp19b1aajsn7f4f7d3832f5",
-      "x-rapidapi-host": "v3.football.api-sports.io",
+        "x-rapidapi-host": "api-football-v1.p.rapidapi.com",  
+        "x-rapidapi-key": "065a61a84cmsh3c1f8ad78d59d8fp19b1aajsn7f4f7d3832f5"
     },
   };
+  
 
   // Make the request and return a promise
   return fetch(url, options)

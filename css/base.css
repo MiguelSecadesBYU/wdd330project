@@ -154,6 +154,8 @@ label {
   overflow: scroll;
 }
 
+
+
 .results-row, .live-row, .stats-row {
   display: flex;
   flex-direction: row;
@@ -165,13 +167,15 @@ label {
 .results-row:hover, .live-row:hover, .stats-row:hover {
   transform: scale(1.05);
   border-width: 4px;
+  background-color: #f0f0f0;
 }
+
 
 .results-row p, live-row p, stats-row p {
   color: var(--secondary-color);
 }
 
-.team {
+.team, .live-cell {
   display: flex;
   flex-direction: row;
   align-items: center;
