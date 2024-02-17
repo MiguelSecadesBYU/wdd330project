@@ -63,7 +63,7 @@ function getLive(){
         "method" : "GET",
         "headers" : {
         "x-rapidapi-host": "api-football-v1.p.rapidapi.com",  
-        "x-rapidapi-key": "065a61a84cmsh3c1f8ad78d59d8fp19b1aajsn7f4f7d3832f5"
+        "x-rapidapi-key": ""
         }
     })
 

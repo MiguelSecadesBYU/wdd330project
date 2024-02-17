@@ -39,9 +39,9 @@
 
                 <div class="league-stats">
                     <h2>League Stats</h2>
-                    <form id="leagueForm1">
-                        <label for="leagueSelect1">Select a league:</label>
-                        <select id="leagueSelect1">
+                    <form id="leagueForm">
+                        <label for="leagueSelect">Select a league:</label>
+                        <select id="leagueSelect">
                             <option value="140">Hypermotion League</option>
                             <option value="39">Premier League</option>
                             <option value="78">Bundesliga</option>
@@ -57,35 +57,45 @@
                     </div>
                 </div>
 
-                <div class="team-stats">
-                    <h2>Team Stats</h2>
-                    <form id="leagueForm2">
-                        <label for="leagueSelect2">Select a league:</label>
-                        <select id="leagueSelect2">
-                            <option value="140">Hypermotion League</option>
-                            <option value="39">Premier League</option>
-                            <option value="78">Bundesliga</option>
-                            <option value="61">Ligue 1</option>
-                            <option value="135">Calcio</option>
-                            <option value="88">Eredivisie</option>
-                            <option value="253">MLS</option>
-                        </select>
-                    </form>
-
-                    <form id="teamForm">
-                        <label for="teamSelect">Select a team:</label>
-                        <select id="teamSelect">
-                            <!-- The options will be dynamically generated -->
-                        </select>
-                    </form>
-
-                    <div id="teamStatsTable" class="stats-table">
-
-                    </div>
+                <!-- Container for the league name and logo -->
+                <div id="league-info">
+                    <img id="league-logo" src="" alt="League logo">
+                    <h1 id="league-name">League name</h1>
                 </div>
-
+    
+                <!-- Container for the team that has scored the most goals -->
+                <div id="top-scorer-team">
+                    <h2>Team that has scored the most goals</h2>
+                    <img id="top-scorer-team-logo" src="" alt="Team logo">
+                    <p id="top-scorer-team-name">Team name</p>
+                    <p id="top-scorer-team-goals">Goals scored: </p>
+                </div>
+    
+                <!-- Container for the team that has conceded the most goals -->
+                <div id="bottom-scorer-team">
+                    <h2>Team that has conceded the most goals</h2>
+                    <img id="bottom-scorer-team-logo" src="" alt="Team logo">
+                    <p id="bottom-scorer-team-name">Team name</p>
+                    <p id="bottom-scorer-team-goals">Goals conceded: </p>
+                </div>
+    
+                <!-- Container for the top scorer -->
+                <div id="top-scorer-player">
+                    <h2>Top scorer</h2>
+                    <p id="top-scorer-player-name">Player name</p>
+                    <p id="top-scorer-player-team">Team</p>
+                    <p id="top-scorer-player-goals">Goals scored: </p>
+                </div>
+    
+                <!-- Container for the top goalkeeper -->
+                <div id="top-keeper-player">
+                    <h2>Top goalkeeper</h2>
+                    <p id="top-keeper-player-name">Player name</p>
+                    <p id="top-keeper-player-team">Team</p>
+                    <p id="top-keeper-player-goals">Goals conceded: </p>
+                </div>
             </div>
-
+                  
         </main>
 
         <footer>
@@ -106,6 +116,6 @@
     </footer>
     </div>
     <script src="js/scripts.js"></script>
-    <script src="js/stats.js"></scr
+    <script src="js/stats.js"></script>
 </body>
 </html>
