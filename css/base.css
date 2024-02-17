@@ -142,7 +142,7 @@ label {
   margin-right: 10px;
 }
 
-.results, .live, .stats{
+.home, .results, .live, .stats{
   position:relative;
   padding: 16px;
   margin-left: 25%;
@@ -152,6 +152,10 @@ label {
   border-radius: 8px;
   text-transform: uppercase;
   overflow: scroll;
+}
+
+.home{
+  height: 300px;
 }
 
 
@@ -185,7 +189,7 @@ label {
   margin-right: 10px;
 }
 
-#leagueForm {
+#leagueForm, .home p {
   display: flex;
   margin-top: 20px;
   margin-bottom: 20px;
